@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* list */
+#eng_en { font-family:"NanumGothic"; }
+#eng_en p { margin:0; }
+#eng_en .tablistDivider { clear:both; overflow:hidden; border-bottom:1px solid #ddd; }
+#eng_en .item-list { margin:0; padding:0; } 
+#eng_en .item-list li { list-style:none; overflow:hidden; border-bottom:1px solid #d8d8d8; padding:5px 10px; }
+#eng_en .item-list li a { color:#5f5f5f; }
+#eng_en .item-list li a.thumbnail { content:""; position:absolute; top:0; left:0; }
+#eng_en .item-list li a.thumbnail img{border:1px solid #e5e5e5; vertical-align:middle; }
+#eng_en .item-list li .item_name { font:normal 13px "NanumGothic"; overflow:hidden; text-decoration:none; }
+#eng_en .item-list li .item_num { padding:5px; height:24px;}
+#eng_en .item-list li .item_price { padding:5px; height:20px; }
+#eng_en .item-list { display:none; overflow:hidden; }
+#eng_en .item-list.open { display:block; }
+#eng_en .item-list .item_image { float:left; margin-right:20px; }
+#eng_en .item-list .item_summary { overflow:hidden; }
+#eng_en ul.nav { text-align:center; margin-top:10px; list-style:none; }
+#eng_en ul.nav li { display:inline; }
+#eng_en ul.nav li.active { font-weight:bold; }
+#eng_en ul.nav li a { text-decoration:none; color:#333; font:normal 15px 'NanumGothic'; padding:0 2px; }
+#eng_en ul.nav li.active a { text-decoration:none; color:#feb20e; font-weight:bold; }
+#eng_en a.more { background:url(../img/more.png) no-repeat; height:26px; width:26px; position:absolute; top:0; right:0; }

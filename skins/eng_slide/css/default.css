@@ -1,0 +1,10 @@
+#nustyle_slider { background:#666; padding:10px; z-index:9999; clear:both; }
+#nustyle_slider ul { margin:0; padding:0; overflow:hidden; }
+#nustyle_slider .bxslider li { overflow:hidden; }
+#nustyle_slider .bx-wrapper { margin:0; }
+#nustyle_slider .bx-wrapper .bx-viewport { border:0; left:0; box-shadow:none; background:transparent; }
+#nustyle_slider a.thumbnail { float:left; margin-right:10px; overflow:hidden; }
+#nustyle_slider .summary { color:#ddd; font:normal 12px 'NanumGothic'; overflow:hidden; }
+#nustyle_slider .summary a { color:#ddd; font:bold 15px 'NanumGothic'; margin-bottom:10px; display:block; }
+#nustyle_slider .bx-wrapper .bx-prev { left:0; }
+#nustyle_slider .bx-wrapper .bx-next { right:0; }

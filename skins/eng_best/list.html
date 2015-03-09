@@ -1,0 +1,38 @@
+<load target="css/style.css" />
+<load target="js/script.js" />
+
+<div id="eng_en" class="page">
+	<div class="tablistDivider">
+		{@$count=0}
+		<block loop="$display_categories=>$cate_key,$cate_val">
+			<block loop="$cate_val->items=>$no,$val">
+				<block cond="($count % $widget_info->num_columns)==0">
+					<block cond="$count>0"></ul></block>
+					<ul class="item-list open"|cond="$count==0" class="item-list"|cond="$count>0">
+				</block>
+				<li id="item_{$val->item_srl}">
+					<span class="item_image">
+						<a class="item_name" href="{getUrl('mid',$cate_val->mid,'document_srl',$val->document_srl)}">
+							<img src="{$val->getThumbnail($widget_info->thumbnail_width,$widget_info->thumbnail_height,$widget_info->thumbnail_type)}" alt="{$val->item_name}" />
+						</a>
+					</span>
+					<div class="item_summary">
+						<span>
+							<a class="item_name" href="{getUrl('mid',$cate_val->mid,'document_srl',$val->document_srl)}" style="line-height:{$widget_info->thumbnail_height}px;">{cut_str($val->item_name, $widget_info->title_length)}</a>
+						</span>
+						<p>
+							<span class="item_price" cond="0"><strong>{$val->printDiscountedPrice()}</strong></span>
+						</p>
+					</div>
+				</li>
+				{@$count+=1}
+			</block>
+		</block>
+		</ul>
+	</div><!-- //tablistDivider -->	
+	<ul class="nav">
+		{@$i=0}
+		{@$pages = ceil($count/$widget_info->num_columns)}
+		<li loop="$i=0;$i<$pages;$i++" class="active"|cond="$i==0"><a href="#" onclick="tablist_show(jQuery(this),jQuery(this).parents('#eng_en ul.nav').prev('div.tablistDivider'),{$i}); return false;">{$i+1}</a></li>
+	</ul>
+</div><!-- //tablist -->
